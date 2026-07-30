@@ -43,6 +43,6 @@ most harmonically alike.
 
 ### How these are built
 
-Standard-library-first where practical, small dependency footprints, `pytest`
+Standard-library-first where practical, small dependency footprints, pytest
 suites, and GitHub Actions CI on every push. The tools that depend on external
 APIs ship an offline demo mode so they run from a fresh clone with no setup.
