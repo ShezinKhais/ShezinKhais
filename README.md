@@ -9,7 +9,7 @@ CI, and a README that explains both how it works and where it falls short.
 
 ### Featured
 
-**[CodeCartographer](https://github.com/Spy125/codecartographer)** &nbsp;·&nbsp; [try the live demo](https://spy125.github.io/codecartographer/)
+**[CodeCartographer](https://github.com/ShezinKhais/codecartographer)** &nbsp;·&nbsp; [try the live demo](https://shezinkhais.github.io/codecartographer/)
 
 Static analysis for Python codebases: module dependency graphs, circular-import
 detection via Tarjan's strongly connected components, a static call graph, and
@@ -18,7 +18,7 @@ implemented from scratch. It generates a self-contained interactive HTML map you
 can open in any browser.
 <br>*Python · AST · graph algorithms · zero dependencies*
 
-**[HarmonicDNA](https://github.com/Spy125/harmonicDNA)**
+**[HarmonicDNA](https://github.com/ShezinKhais/harmonicDNA)**
 
 Applies Smith-Waterman local alignment, the bioinformatics algorithm for
 comparing DNA sequences, to chord progressions extracted from audio. Two songs
@@ -32,10 +32,10 @@ most harmonically alike.
 
 | Project | What it does |
 |---|---|
-| [claimaudit](https://github.com/Spy125/claimaudit) | Tracks whether a paper's empirical claims are later confirmed, challenged, or extended by the work that cites them. |
-| [Hypothesisgraveyard](https://github.com/Spy125/Hypothesisgraveyard) | Finds scientific hypotheses that were published and then never meaningfully engaged with by later citations. |
-| [argumentminer](https://github.com/Spy125/argumentminer) | Extracts claims, premises, and logical fallacies from argumentative text and renders the structure as a directed graph. |
-| [federated-aml](https://github.com/Spy125/federated-aml) | Federated Averaging (FedAvg) for fraud detection across simulated banks: models train locally, only weights are shared. |
+| [claimaudit](https://github.com/ShezinKhais/claimaudit) | Tracks whether a paper's empirical claims are later confirmed, challenged, or extended by the work that cites them. |
+| [Hypothesisgraveyard](https://github.com/ShezinKhais/Hypothesisgraveyard) | Finds scientific hypotheses that were published and then never meaningfully engaged with by later citations. |
+| [argumentminer](https://github.com/ShezinKhais/argumentminer) | Extracts claims, premises, and logical fallacies from argumentative text and renders the structure as a directed graph. |
+| [federated-aml](https://github.com/ShezinKhais/federated-aml) | Federated Averaging (FedAvg) for fraud detection across simulated banks: models train locally, only weights are shared. |
 
 ---
 
