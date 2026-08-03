@@ -49,7 +49,7 @@ function and threshold, including the approach that looked safe and was not.
 
 *Python · signal processing · speaker verification*
 
-**[C.L.I.P](https://github.com/ShezinKhais/Cognitive_Learning_Intelligence_Platform)**
+**C.L.I.P** &nbsp;·&nbsp; *private repository*
 
 Team capstone (CSIT321, University of Wollongong in Dubai). A Microsoft Teams app
 that generates comprehension checkpoints from a lecturer's own slides and surfaces
