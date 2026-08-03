@@ -8,6 +8,7 @@ tooling and research-analysis utilities. I try to make each one genuinely
 usable rather than a demo, so every project has a test suite, GitHub Actions
 CI, and a README that explains both how it works and where it falls short.
 
+[![Portfolio](https://img.shields.io/badge/Portfolio-shezinkhais.github.io-3776AB?style=flat-square&logo=githubpages&logoColor=white)](https://shezinkhais.github.io/)
 [![Email](https://img.shields.io/badge/Email-shezinkhais%40gmail.com-informational?style=flat-square&logo=gmail&logoColor=white)](mailto:shezinkhais@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-shezinkhaiser-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shezinkhaiser/)
 
