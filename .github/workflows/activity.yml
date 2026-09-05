@@ -1,0 +1,65 @@
+# Redraws the contribution chart in assets/ once a day.
+#
+# The chart used to be an <img> pointing at a graph service on Vercel. That
+# deployment returned 402 Payment required, so the image stopped rendering on
+# the profile and no amount of cache-busting would bring it back. Rendering it
+# here means the only things it depends on are GitHub's own API and this repo.
+name: refresh activity chart
+
+on:
+  schedule:
+    - cron: '41 4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch the contribution calendar
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USER: ${{ github.repository_owner }}
+        run: |
+          set -euo pipefail
+          gh api graphql -f login="$USER" -f query='
+            query($login:String!) {
+              user(login:$login) {
+                contributionsCollection {
+                  contributionCalendar {
+                    totalContributions
+                    weeks { contributionDays { date contributionCount } }
+                  }
+                }
+              }
+            }' > calendar.json
+          # A truncated or empty answer must not be allowed to overwrite a good
+          # chart with a flat line, so the renderer refuses anything short.
+          node -e '
+            const c = require("./calendar.json").data.user.contributionsCollection.contributionCalendar;
+            const n = c.weeks.reduce((a, w) => a + w.contributionDays.length, 0);
+            console.log(`${n} days, ${c.totalContributions} contributions`);
+            if (n < 300) { console.error("calendar came back short"); process.exit(1); }
+          '
+
+      - name: Draw it
+        run: node .github/scripts/render-activity.js calendar.json
+
+      - name: Commit if anything moved
+        run: |
+          set -euo pipefail
+          rm -f calendar.json
+          if git diff --quiet -- assets; then
+            echo "activity unchanged"
+            exit 0
+          fi
+          total=$(grep -o 'aria-label="[0-9]*' assets/activity-dark.svg | head -1 | grep -o '[0-9]*')
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets
+          git commit -m "activity - ${total} contributions in the last year"
+          git push

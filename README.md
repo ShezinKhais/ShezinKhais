@@ -79,6 +79,6 @@ APIs ship an offline demo mode so they run from a fresh clone with no setup.
 ---
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=ShezinKhais&bg_color=0d1117&color=58a6ff&line=58a6ff&point=8b949e&area=true&hide_border=true" />
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=ShezinKhais&bg_color=ffffff&color=0969da&line=0969da&point=57606a&area=true&hide_border=true" alt="Contribution activity over the past year" />
+  <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg" />
+  <img src="assets/activity-light.svg" alt="Contribution activity over the past year" />
 </picture>
