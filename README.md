@@ -4,9 +4,10 @@
 </picture>
 
 Computer science student building small, focused tools in Python: developer
-tooling and research-analysis utilities. I try to make each one genuinely
-usable rather than a demo, so every project has a test suite, GitHub Actions
-CI, and a README that explains both how it works and where it falls short.
+tooling, research-analysis utilities and one Android app. I try to make each
+one genuinely usable rather than a demo, so every project has a test suite and
+a README that explains both how it works and where it falls short, and the
+Python ones run their tests in GitHub Actions on every push.
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-shezinkhais.github.io-3776AB?style=flat-square&logo=githubpages&logoColor=white)](https://shezinkhais.github.io/)
 [![Email](https://img.shields.io/badge/Email-shezinkhais%40gmail.com-informational?style=flat-square&logo=gmail&logoColor=white)](mailto:shezinkhais@gmail.com)
@@ -16,13 +17,26 @@ CI, and a README that explains both how it works and where it falls short.
 
 ### Featured
 
+**[Clearlane](https://github.com/ShezinKhais/clearlane)**
+
+An Android routing app that looks for the least congested way to a destination
+instead of the quickest one, and tells you exactly what the calm route costs in
+minutes. Built for the UAE, where five motorways run the same direction a few
+kilometres apart and a routing API asked for alternatives will never offer you
+the far one. Includes a driving screen with speed against the posted limit and
+warnings from 1,566 real camera positions, plus a congestion model, a drive
+score, and Salik tariff windows. 102 tests across the pure-Kotlin modules.
+
+*Kotlin · Jetpack Compose · MapLibre · routing and congestion modelling*
+
 **[CodeCartographer](https://github.com/ShezinKhais/codecartographer)** &nbsp;·&nbsp; [live demo](https://shezinkhais.github.io/codecartographer/) &nbsp;·&nbsp; [![tests](https://github.com/ShezinKhais/codecartographer/actions/workflows/tests.yml/badge.svg)](https://github.com/ShezinKhais/codecartographer/actions/workflows/tests.yml)
 
 Static analysis for Python codebases: module dependency graphs, circular-import
 detection via Tarjan's strongly connected components, a static call graph, and
 dead-code detection. No runtime dependencies, and the graph algorithms are
-implemented from scratch. It generates a self-contained interactive HTML map you
-can open in any browser.
+implemented from scratch. It generates a self-contained HTML report, with the
+import map, the findings as readable prose, and a view that traces how execution
+reaches any function you name.
 
 *Python · AST · graph algorithms · zero dependencies*
 
@@ -65,7 +79,7 @@ real-time engagement, without ever storing video, audio, or transcripts.
 |---|---|
 | [claimaudit](https://github.com/ShezinKhais/claimaudit) | Tracks whether a paper's empirical claims are later confirmed, challenged, or extended by the work that cites them. |
 | [Hypothesisgraveyard](https://github.com/ShezinKhais/Hypothesisgraveyard) | Finds scientific hypotheses that were published and then never meaningfully engaged with by later citations. |
-| [argumentminer](https://github.com/ShezinKhais/argumentminer) | Extracts claims, premises, and logical fallacies from argumentative text and renders the structure as a directed graph. |
+| [argumentminer](https://github.com/ShezinKhais/argumentminer) | Extracts claims, premises, and the phrasing of eight logical fallacies from argumentative text, and lays the structure out as a readable report. |
 | [federated-aml](https://github.com/ShezinKhais/federated-aml) | Federated Averaging (FedAvg) for fraud detection across simulated banks: models train locally, only weights are shared. |
 
 ---
